@@ -40,6 +40,7 @@
 		<modelmapper.version>2.3.2</modelmapper.version>
 		<springfox.swagger.version>2.9.2</springfox.swagger.version>
 		<fixture.factory.version>3.1.0</fixture.factory.version>
+		<spring.cloud.starter.openfeign.version>2.1.2.RELEASE</spring.cloud.starter.openfeign.version>
 	</properties>
 
 	<dependencies>
@@ -115,7 +116,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -151,6 +152,11 @@
 			<groupId>br.com.six2six</groupId>
 			<artifactId>fixture-factory</artifactId>
 			<version>${fixture.factory.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>${spring.cloud.starter.openfeign.version}</version>
 		</dependency>
 	</dependencies>
 	<packaging>jar</packaging>

@@ -21,7 +21,7 @@ public class ReembolsoDTO {
 
 	private String solicitante;
 
-	private String secao;
+	private String siglaSecao;
 
 	private Double valor;
 

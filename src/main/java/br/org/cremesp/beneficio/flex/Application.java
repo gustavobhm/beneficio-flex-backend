@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -18,6 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
+@EnableFeignClients
 public class Application extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
@@ -37,8 +39,10 @@ public class Application extends SpringBootServletInitializer {
 				.paths(PathSelectors.any()) //
 				.build() //
 				.apiInfo(apiInfo()) //
-				.tags(new Tag("API Reembolso", "Métodos para sala") //
-						, new Tag("API Beneficio", "Métodos para horário"));
+				.tags( //
+						new Tag("API Reembolso", "Métodos para sala") //
+						, new Tag("API Beneficio", "Métodos para horário") //
+						, new Tag("API Report", "Métodos para report"));
 	}
 
 	private ApiInfo apiInfo() {

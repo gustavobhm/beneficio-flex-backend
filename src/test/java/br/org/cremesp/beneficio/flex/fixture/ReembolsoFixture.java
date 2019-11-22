@@ -21,7 +21,7 @@ public class ReembolsoFixture implements TemplateLoader {
 			{
 				add("id", uniqueRandom(3, 100));
 				add("solicitante", regex("[A-Z]{1}[A-Z a-z]{9,29}"));
-				add("secao", regex("[A-Z]{1}[A-Z a-z]{9,29}"));
+				add("siglaSecao", regex("[A-Z]{1}[A-Z a-z]{9,29}"));
 				add("valor", random(Double.class, range(1, 9999.99)));
 				add("data", randomDate("2999-01-01", "2999-12-31", new SimpleDateFormat("yyyy-MM-dd")));
 				add("beneficio", one(Beneficio.class, BeneficioFixture.VALID_BENEFICIO_1));
@@ -33,7 +33,7 @@ public class ReembolsoFixture implements TemplateLoader {
 			{
 				add("id", 1);
 				add("solicitante", "Solicitante 1");
-				add("secao", "Seção 1");
+				add("siglaSecao", "Seção 1");
 				add("valor", 390.99);
 				add("data", DataUtils.newDateWithFormat("2019-09-12"));
 				add("beneficio", one(Beneficio.class, BeneficioFixture.VALID_BENEFICIO_1));
@@ -45,7 +45,7 @@ public class ReembolsoFixture implements TemplateLoader {
 			{
 				add("id", 2);
 				add("solicitante", "Solicitante 2");
-				add("secao", "Seção 2");
+				add("siglaSecao", "Seção 2");
 				add("valor", 1999.00);
 				add("data", DataUtils.newDateWithFormat("2019-09-13"));
 				add("beneficio", one(Beneficio.class, BeneficioFixture.VALID_BENEFICIO_2));

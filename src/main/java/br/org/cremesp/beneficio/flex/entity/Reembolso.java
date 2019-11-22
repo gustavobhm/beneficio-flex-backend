@@ -43,9 +43,9 @@ public class Reembolso implements Serializable {
 	@NotNull
 	private String solicitante;
 
-	@Column(name = "SECAO", nullable = false)
+	@Column(name = "SIGLA_SECAO", nullable = false)
 	@NotNull
-	private String secao;
+	private String siglaSecao;
 
 	@Column(name = "VALOR", nullable = false)
 	@NotNull
