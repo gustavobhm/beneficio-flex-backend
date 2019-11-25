@@ -5,10 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.org.cremesp.beneficio.flex.client.SecaoClient;
 import br.org.cremesp.beneficio.flex.constantes.BeneficioFlexEnum;
 import br.org.cremesp.beneficio.flex.entity.Reembolso;
-import br.org.cremesp.beneficio.flex.entity.Secao;
 import br.org.cremesp.beneficio.flex.exception.BadRequestException;
 import br.org.cremesp.beneficio.flex.repository.ReembolsoRepository;
 
@@ -18,15 +16,7 @@ public class ReembolsoService {
 	@Autowired
 	private ReembolsoRepository reembolsoRepository;
 
-	/*@Autowired
-	private SecaoClient secaoClient;*/
-
 	public List<Reembolso> getAll() {
-
-		/*for (Secao secao : secaoClient.getAll(true)) {
-			System.out.println(secao.getDescricao());
-		}*/
-
 		return reembolsoRepository.findAllByOrderByIdAsc();
 	}
 
