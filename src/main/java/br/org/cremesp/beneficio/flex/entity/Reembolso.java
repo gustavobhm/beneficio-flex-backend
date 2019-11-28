@@ -16,6 +16,7 @@ import javax.validation.constraints.NotNull;
 import org.modelmapper.ModelMapper;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import br.org.cremesp.beneficio.flex.dto.ReembolsoDTO;
 import lombok.AllArgsConstructor;
@@ -52,6 +53,8 @@ public class Reembolso implements Serializable {
 	private Double valor;
 
 	@Column(name = "DATA", nullable = false)
+
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 	@NotNull
 	private Date data;
 

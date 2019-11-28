@@ -13,9 +13,9 @@ public interface ReembolsoView {
 	Long getValor();
 
 	Date getData();
-	
+
 	Beneficio getBeneficio();
-	
+
 	String getObservacao();
 
 }
